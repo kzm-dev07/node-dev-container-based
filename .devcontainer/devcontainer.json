@@ -1,0 +1,38 @@
+//devcontainer.json
+{
+  "name": "node-dev-container-based",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "build": {
+    // Path is relative to the devcontainer.json file.
+    "dockerfile": "./Dockerfile"
+  },
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {},
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "alefragnani.Bookmarks",
+        "EditorConfig.EditorConfig",
+        "oderwat.indent-rainbow",
+        "shardulm94.trailing-spaces",
+        "vscode-icons-team.vscode-icons",
+        "akamud.vscode-theme-onedark",
+        "GitHub.copilot"
+      ]
+    }
+  },
+  // "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Hello Remote World",
+      "onAutoForward": "notify"
+    }
+  },
+  "postStartCommand": ".devcontainer/postStart.sh"
+  // "remoteUser": "vscode"
+}
