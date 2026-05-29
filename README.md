@@ -4,5 +4,5 @@ This is a Node.js project based on [Dev Containers](https://code.visualstudio.co
 
 ## What are included.
 - node v24.13.1
-- pnpm v10.30.1
+- pnpm v11.4.0
 - git
